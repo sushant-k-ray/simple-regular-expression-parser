@@ -1,7 +1,7 @@
 # Simple Regular Expression Parser
 
 ## About
-This project is a simple regular expression parser made for educational purposes. Lots of potential optimization are possible. The included sample.cpp gives a glimpse of how to use this for regular expressions
+This project is a simple regular expression parser made for educational purposes. Lots of potential optimization are possible. The included main.cpp gives a glimpse of how to use this for regular expressions
 
 *Note* : A C++ 20 compliant compiler is required to build the project
 
