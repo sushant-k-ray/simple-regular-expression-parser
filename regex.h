@@ -20,7 +20,8 @@ class regex
         void add_char  (char _character)
         { ranges.push_back(std::make_pair(_character, _character)); }
 
-        void add_array (auto& array)
+        template<typename T>
+        void add_array (T& array)
         { ranges.insert(ranges.end(), array.cbegin(), array.cend()); }
 
         bool specialCharacter(char);

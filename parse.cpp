@@ -144,6 +144,10 @@ void regex::parse(std::string_view string)
                 throw exception("multiple consecutive quantifiers",
                                 tokens[i + 1].startLocation);
 
+            if(tokens[i - 1].type == token::disjunction)
+                throw exception("quantifier not applicable on disjunction",
+                                tokens[i].startLocation);
+
             tokens.erase(tokens.begin() + i--);
             end -= 1;
         }

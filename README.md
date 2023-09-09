@@ -3,7 +3,7 @@
 ## About
 This project is a simple regular expression parser made for educational purposes. Lots of potential optimization are possible. The included main.cpp gives a glimpse of how to use this for regular expressions
 
-*Note* : A C++ 20 compliant compiler is required to build the project
+*Note* : A C++ 17 compliant compiler is required to build the project
 
 ---
 ## Usage
@@ -17,7 +17,6 @@ call regex::parse function. For e.g. :
 regex r;
 r.parse("your regex here");
 ```
-
 Now either call match() function to check if whole string matches the regular expression
 ```
 r.match("your string here");
@@ -38,6 +37,10 @@ r.find() returns vector of std::pair, where 1<sup>st</sup> is the starting index
 This project uses a simple and fast algorithm(O(m*n), where m is the complexity of the regex). As a result not many modern functionalities, such as lazy quantifiers and group naming are available. Only the basic quantifiers and disjunction is supported as of now
 
 ---
+## Optimization opportunities:
 
+This library is not made to be used for other projects. It's just for educational purposes. The use of tokens in this library could be optimised out if required. However, doing so would make it unnecessary complicated. Managing the disjunction would be a nightmare in that case. Moreover, Regex parsing is to be done once only.
+
+---
 ## Known Bugs
 * Let me know if there are any
